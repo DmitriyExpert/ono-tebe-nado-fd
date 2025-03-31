@@ -4,6 +4,7 @@
 
 .link__underline {
   position: relative;
+  text-decoration: none;
   width: fit-content;
 }
 
@@ -23,8 +24,7 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
   width: 100%;
   max-width: 100%;
@@ -74,8 +74,8 @@
   list-style-type: none;
 }
 
-.menu__item-active .menu__item-link {
-  text-decoration: none;
+.menu__item-link_active {
+    text-decoration: none;
 }
 
 .menu__item-link {
@@ -91,9 +91,6 @@
 .header__address {
   justify-self: end;
   max-width: 240px;
-}
-
-.address__menu {
   display: flex;
   flex-direction: column;
   row-gap: 3px;
@@ -165,8 +162,8 @@
 
 .lots__card-list {
   display: flex;
+  column-gap: 25px;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   row-gap: 30px;
   margin-bottom: 30px;
@@ -177,11 +174,11 @@
   position: relative;
   width: 100%;
   max-width: 334px;
-  height: 596px;
 }
 
 .card-link {
   height: 100%;
+  text-decoration: none;
 }
 
 .card {
@@ -190,30 +187,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 596px;
   padding: 48px 40px;
   color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card__title {
@@ -238,7 +229,6 @@
   display: grid;
   grid-template-columns: 334px 1fr;
   column-gap: 25px;
-  min-height: 595px;
   padding: 0px 24px 180px;
 }
 
@@ -265,16 +255,14 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-}
-
-.about__text {
-  max-width: 690px;
-  line-height: 1.21;
+  max-width: 693px;
 }
 
 .about__text:first-child {
-  max-width: 688px;
+  max-width: 670px;
+  line-height: 1.21;
 }
+
 
 .footer {
   display: grid;
